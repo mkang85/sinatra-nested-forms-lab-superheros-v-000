@@ -2,7 +2,7 @@
 <h2> Team Motto: <%= @team[:motto]%> </h2><br>
 binding.pry
 <% @team[:super_hero].each_with_index do |hero, index| %>
-    <h2>Hero Name:</h2> <%=@team[:super_hero][:name][index] %>
+    <h2>Hero Name:<%=@team[:super_hero][:name][index] %></h2>
     <p>
       Hero Power: <%=@team[:super_hero][:power][index]%>
       <br>
