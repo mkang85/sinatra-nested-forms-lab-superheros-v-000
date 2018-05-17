@@ -1,14 +1,10 @@
 <h1>Team Name:<%= @team[:name] %></h1>
 <h2> Team Motto: <%= @team[:motto]%> </h2><br>
 
-<h2>Hero Name:<%= @team[:super_hero][0][:name]%></h2>
-<h3>Hero Power:<%= @team[:super_hero][0][:power]%></h3>
-<h3>Hero Biography:<%= @team[:super_hero][0][:biography]%></h3>
-
-<h2>Hero Name:<%= @team[:super_hero][1][:name]%></h2>
-<h3>Hero Power:<%= @team[:super_hero][1][:power]%></h3>
-<h3>Hero Biography:<%= @team[:super_hero][1][:biography]%></h3>
-
-<h2>Hero Name:<%= @team[:super_hero][2][:name]%></h2>
-<h3>Hero Power:<%= @team[:super_hero][2][:power]%></h3>
-<h3>Hero Biography:<%= @team[:super_hero][2][:biography]%></h3>
+<% @team[:super_hero].each_with_index do |hero, index| %>
+    <h2>Hero Name:</h2> <%=@team[:super_hero][:name][index] %>
+    <p>
+      Hero Power: <%=@team[:super_hero][:power][index]%>
+      <br>
+      Hero Biography: <%=@team[:super_hero][:biography][index]%>
+    </p>
