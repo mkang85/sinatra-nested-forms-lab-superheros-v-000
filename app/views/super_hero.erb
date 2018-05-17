@@ -1,6 +1,6 @@
 <h1>Team Name:<%= @team[:name] %></h1>
 <h2> Team Motto: <%= @team[:motto]%> </h2><br>
-
+binding.pry
 <% @team[:super_hero].each_with_index do |hero, index| %>
     <h2>Hero Name:</h2> <%=@team[:super_hero][:name][index] %>
     <p>
